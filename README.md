@@ -2,9 +2,10 @@
 
 ## Inhaltsverzeichnis
 - [Tag 1, 16.05.2023](#tag-1-16052023)
+- [Tag 2, 23.05.2023](#tag-2-23052023)
 ### Tag 1 [16.05.2023]
 -----------
-### Theorie 
+### 1.1 Theorie 
 
 #### Zahlensysteme 
 
@@ -17,10 +18,10 @@ Ein Hex-Editor ist ein spezielles Programm, das verwendet wird, um den Inhalt un
 Vorteile: 
 1. Analyse von Dateiformaten: Hex-Editoren ermöglichen es Entwicklern und Analysten, die Struktur und das Format von Dateien zu untersuchen. Da Dateien auf binärer Ebene gespeichert sind, ist es oft schwierig, den Inhalt mit einem Texteditor oder einem herkömmlichen Programm zu interpretieren. 
 2. Datenbearbeitung: Hex-Editoren bieten die Möglichkeit, den Inhalt von Dateien direkt zu bearbeiten. Dies ist besonders hilfreich, wenn es erforderlich ist, bestimmte Werte oder Muster innerhalb einer Datei zu ändern. 
-3. Datenrettung und Wiederherstellung: Bei der Datenrettung von beschädigten oder gelöschten Dateien können Hex-Editoren äußerst nützlich sein. Durch die direkte Analyse des binären Inhalts einer Datei ist es möglich, beschädigte oder fehlende Daten wiederherzustellen.
 -----------
-### Aufgaben 
+### 1.2 Aufgaben 
 #### Theorie
+Zahlensystem
 + Zweiersystem oder Binärsystem bzw. Dualsystem
 Basis: 2
 Zeichenvorrat: 0, 1
@@ -105,6 +106,79 @@ Die Hexadezimalzahl ist E2A5.
 
 
 -----------
-### Reflexion 
+### 1.3 Reflexion 
 Wir haben mit dem Thema "Daten codieren" begonnen. Unser Lehrer hat uns eine interessante Anekdote über ein Schachspiel erzählt, die uns verdeutlicht hat, wie wichtig das Codieren von Daten sein kann. Wir haben das Dokument "Schachbrett.pdf" erhalten, um die Anekdote besser zu verstehen. Anschließend wurden wir aufgefordert, eine kurze Übung mit einer Java-IDE durchzuführen. Wir sollten die Anzahl der Reiskörner auf dem letzten Schachfeld berechnen. Dabei haben wir verschiedene Konzepte wie Datentypen, Wertebereich, Ganzzahlen (mit oder ohne Vorzeichen) und Fliesskommazahlen diskutiert. Besonders interessant fand ich die Diskussion über die Formatierung und Genauigkeit von Fliesskommazahlen. Wir haben gelernt, wie wir eine Datei mit einem HEX-Editor analysieren können, zum Beispiel mit dem Online-Editor "hexed.it". Dabei haben wir auch über verschiedene Zahlensysteme wie Dual/Binär, Oktal und HEX sowie numerische Codes gesprochen. In den letzten zwei Stunden haben wir Zeit bekommen verschiedene Aufgaben zu lösen zum Thema Zahlensysteme. 
 
+### Tag 2 [23.05.2023]
+
+-----------
+### 2.1 Theorie 
+#### 2er Komplement 
+Der 2er-Komplement-Code ist eine Methode zur Darstellung von negativen Zahlen in Computern. Im 2er-Komplement wird die negative Darstellung einer Zahl durch die Invertierung aller Bits (Nullen werden zu Einsen und Einsen werden zu Nullen) und die Addition von Eins zum Ergebnis der Invertierung erreicht.
+#### ASCII: (American Standard Code for Information Interchange)
+ASCII ist ein Zeichensatz, der in Computern weit verbreitet ist und zur Darstellung von Text verwendet wird. Es ist ein 7-Bit-Code, der 128 verschiedene Zeichen enthält, darunter Buchstaben, Zahlen, Satzzeichen und Steuerzeichen. Jedes Zeichen wird durch eine spezifische binäre Zahl repräsentiert. Zum Beispiel wird der Buchstabe "A" durch die Zahl 65 dargestellt. ASCII war einer der ersten standardisierten Zeichensätze und ist nach wie vor weit verbreitet, insbesondere in englischsprachigen Ländern.
+#### Unicode
+Unicode ist ein internationaler Zeichensatz, der entwickelt wurde, um eine umfassende Darstellung von Schriftzeichen aller Schriftsysteme der Welt zu ermöglichen. Im Gegensatz zu ASCII ist Unicode ein 16-Bit- oder 32-Bit-Code und kann somit eine viel größere Anzahl von Zeichen darstellen. Unicode umfasst Zeichen aus verschiedenen Sprachen, Symbole, Emojis und Sonderzeichen. Es ermöglicht eine standardisierte Darstellung von Texten in verschiedenen Sprachen und ist in der heutigen globalisierten Welt von großer Bedeutung.
+
+-----------
+### 2.2 Aufgaben
+Zahlensystem
+
+5. Der Addierer einer ALU erhält für Zahl-A: 1101'1001 und für Zahl-B: 0111'0101. Was wird man als Resultat erhalten? Erklären sie!
+
+_Meine Lösung:_
+
+Das Ergebnis der Addition von Zahl A (1101 1001) und ZahlB (0111 0101) ist  0100 1110.
+
+6. Sie analysieren mit den Network-Sniffer Wireshark ihren Network-Traffic. Sie haben in OSI-Layer3 unter anderem folgende Bitkombination herausgelesen:
+1100 0000 . 1010 1000 . 0100 1100 . 1101 0011
+Was bedeuet dies? Beantworten sie diese Frage möglichst umfassend.
+(BTW: Wer für diese und alle weiteren Umrechnungen den Taschenrechner benutzt, betrügt sich selbst ;-)
+
+_Meine Lösung:_
+Die Bitkombination, lässt sich in vier Oktette aufteilen: 1100 0000, 1010 1000, 0100 1100 und 1101 0011. Aus diese Okete kann man ein IPv4 Adresse bilden. Das erste Oktett 1100 0000 entspricht in dezimaler Form der Zahl 192.
+Das zweite Oktett 1010 1000 entspricht in dezimaler Form der Zahl 168.
+Das dritte Oktett 0100 1100 entspricht in dezimaler Form der Zahl 76.
+Das vierte Oktett 1101 0011 entspricht in dezimaler Form der Zahl 211.
+
+Zusammenergibt sich die IP-Adresse: 192.168.76.211.
+
+8. In einer LINUX-Shell (Terminal) entdecken sie folgende Programmzeile:
+chmod 751 CreateWeeklyReport
+Was bedeuet dies? Beantworten sie diese Frage möglichst umfassend.
+
+_Meine Lösung:_
+
+Der Befehl "chmod" steht für "change mode" und ermöglicht die Veränderung der Zugriffsrechte von Dateien und Verzeichnissen in Linux.
+
+Die erste Ziffer (7) repräsentiert die Zugriffsrechte für den Eigentümer der Datei. In diesem Fall erhält der Eigentümer volle Rechte (Lesen, Schreiben und Ausführen).
+
+Die zweite Ziffer (5) repräsentiert die Zugriffsrechte für die Gruppe, der die Datei gehört. In diesem Fall erhält die Gruppe Leserechte und Ausführungsrechte, jedoch keine Schreibrechte.
+
+Die dritte Ziffer (1) repräsentiert die Zugriffsrechte für andere Benutzer, die nicht Eigentümer sind und nicht zur Gruppe gehören. In diesem Fall haben andere Benutzer nur Ausführungsrechte, jedoch keine Leserechte oder Schreibrechte.
+
+Die Zahl "751" bedeutet, dass der Eigentümer volle Rechte hat, die Gruppe Lese- und Ausführungsrechte hat und andere Benutzer nur Ausführungsrechte haben.
+
+ASCII & UNICODE
+1. Welche der Dateien ist nun ASCII-codiert, welche UTF-8 und welche UTF-16 BE-BOM?
+
+_Meine Lösung:_
+Wenn man die Dateien auf Notepad++ öffnet und auf die Option Coding klickt sieht man welche Zeichencodierung für die Dateien verwendet wird.
+Testsample1=ASCII, Testsample2=UTF-8, Testsample3=UTF-16 BE-BOM
+
+2. Alle drei Dateien enthalten denselben Text. Aus wie vielen Zeichen besteht dieser?
+
+_Meine Lösung:_
+Der Text besteht aus 64 Zeichen. 
+
+5. Big-Endian (BE): Bei Big-Endian werden die Bytes eines Zeichens in aufsteigender Reihenfolge von links nach rechts angeordnet. Das bedeutet, dass das höchstwertige Byte (Most Significant Byte, MSB) zuerst steht und das niederwertigste Byte (Least Significant Byte, LSB) zuletzt kommt. Diese Reihenfolge entspricht der natürlichen Schreibweise von Zahlen in menschenlesbarer Form. 
+  
+_Meine Lösung:_
+- Big-Endian (BE): Bei Big-Endian werden die Bytes eines Zeichens in aufsteigender Reihenfolge von links nach rechts angeordnet. Das bedeutet, dass das höchstwertige Byte (Most Significant Byte, MSB) zuerst steht und das niederwertigste Byte (Least Significant Byte, LSB) zuletzt kommt. Diese Reihenfolge entspricht der natürlichen Schreibweise von Zahlen in menschenlesbarer Form. 
+
+- Little-Endian (LE): Im Gegensatz dazu werden bei Little-Endian die Bytes eines Zeichens in umgekehrter Reihenfolge angeordnet, also vom LSB zum MSB. Das niedrigstwertige Byte steht zuerst und das höchstwertige Byte steht zuletzt. 
+
+
+-----------
+### 2.3 Reflexion 
+Heute haben wir Zeit bekommen weiter an den Aufgaben zu arbeiten bezüglich der Zahlensysteme. Danach haben wir uns mit einem neuen Thema auseinander gesetzt. Die Beschäftigung mit den verschiedenen alphanumerischen Codes wie dem 7-Bit-ASCII-Code, dem 8-Bit-ASCII-Code, und den verschiedenen Varianten des Unicode (UTF-8, UTF-16 und UTF-32) hat mir einen tieferen Einblick in die komplexe Welt der Zeichenkodierung und Textdarstellung in der Computertechnologie gegeben. Wir haben auch Aufgaben über dieses Thema bekommen. 
