@@ -182,3 +182,217 @@ _Meine Lösung:_
 -----------
 ### 2.3 Reflexion 
 Heute haben wir Zeit bekommen weiter an den Aufgaben zu arbeiten bezüglich der Zahlensysteme. Danach haben wir uns mit einem neuen Thema auseinander gesetzt. Die Beschäftigung mit den verschiedenen alphanumerischen Codes wie dem 7-Bit-ASCII-Code, dem 8-Bit-ASCII-Code, und den verschiedenen Varianten des Unicode (UTF-8, UTF-16 und UTF-32) hat mir einen tieferen Einblick in die komplexe Welt der Zeichenkodierung und Textdarstellung in der Computertechnologie gegeben. Wir haben auch Aufgaben über dieses Thema bekommen. 
+
+### Tag 3 [30.05.2023]
+### 3.1 Theorie 
+Das additive Farbmodell (RGB) basiert auf der Idee, dass durch das Hinzufügen von Licht in den Grundfarben Rot, Grün und Blau verschiedene Farben erzeugt werden können. Indem diese drei Farben in unterschiedlichen Intensitäten miteinander kombiniert werden, entstehen die verschiedenen Farbtöne. Bei maximaler Intensität aller drei Farben erscheint Weiß, während bei keiner Intensität Schwarz entsteht. Das RGB-Farbmodell wird in digitalen Displays, Monitoren, Fernsehern und anderen Lichtquellen verwendet.
+
+Das subtraktive Farbmodell (CMYK) hingegen basiert auf der Idee, dass Farben durch die Absorption oder Subtraktion von Licht erzeugt werden. Die Grundfarben Cyan, Magenta, Gelb und Schwarz (Key) werden auf weißem Papier oder einem anderen hellen Hintergrund gedruckt und absorbieren Licht in unterschiedlichem Maße. Durch die Kombination dieser Farben in verschiedenen Intensitäten entstehen andere Farben. Das CMYK-Farbmodell wird in der Druckindustrie verwendet, da es besser die Eigenschaften von Farbstoffen und Tinten repräsentiert.
+
+Der Hauptunterschied zwischen RGB und CMYK liegt in ihrer Anwendung und den Farbabweichungen, die auftreten können. RGB eignet sich besser für die Darstellung von Farben in digitalen Anwendungen, da es die Eigenschaften von Lichtquellen widerspiegelt. CMYK hingegen ist besser geeignet für den Druck, da es die Eigenschaften von Farbstoffen und Tinten besser darstellt.
+### 3.2 Aufgaben
+FF0000 entspricht der Farbe .... -> rot
+00FF00 entspricht der Farbe .... -> grün
+0000FF entspricht der Farbe .... -> blau
+FFFF00 entspricht der Farbe .... -> gelb
+00FFFF entspricht der Farbe .... -> cyan
+FF00FF entspricht der Farbe .... -> magenta
+000000 entspricht der Farbe .... -> schwarz
+FFFFFF entspricht der Farbe .... -> weiss
+00BC00 entspricht der Farbe ... -> dunkel/militär grün
+
+(nochmal anschauen)
+C:0%, M:100%, Y:100%, K:0% entspricht der Farbe Cyan
+C:100%, M:0%, Y:100%, K:0% entspricht der Farbe Magenta
+C:100%, M:100%, Y:0%, K:0% entspricht der Farbe Gelb
+C:0%, M:0%, Y:100%, K:0% entspricht der Farbe Blau
+C:100%, M:0%, Y:0%, K:0% entspricht der Farbe Rot
+C:0%, M:100%, Y:0%, K:0% entspricht der Farbe Grün
+C:100%, M:100%, Y:100%, K:0% entspricht der Farbe Weiss
+C:0%, M:0%, Y:0%, K:100% entspricht der Farbe Schwarz
+C:0%, M:0%, Y:0%, K:0% entspricht der Farbe Transparent
+C:0%, M:46%, Y:38%, K:22% entspricht der Farbe Braun
+
+RGB 255/255/255 ergibt in YCbCr:
+Y: 1, Cb: 0, Cr: 0
+
+RGB 0/0/0 ergibt in YCbCr:
+Y: 0, Cb: 0, Cr: 0
+
+Y: 1, Cb: 0, Cr: 0 entspricht der Farbe:
+Diese Kombination repräsentiert eine helle Farbe, wobei die Cb- und Cr-Komponenten neutral sind.
+
+Y: 0, Cb: 0, Cr: 0 entspricht der Farbe:
+Diese Kombination repräsentiert die Farbe Schwarz, da alle Komponenten auf Null gesetzt sind.
+
+Y: 0, Cb: 1, Cr: 0 entspricht der Farbe:
+Diese Kombination repräsentiert eine Farbe, bei der die Cb-Komponente den Blauanteil hervorhebt.
+
+Y: 0, Cb: -1, Cr: 0 entspricht der Farbe:
+Diese Kombination repräsentiert eine Farbe, bei der die Cb-Komponente den Gelbanteil verstärkt.
+
+Y: 0, Cb: 0, Cr: 1 entspricht der Farbe:
+Diese Kombination repräsentiert eine Farbe, bei der die Cr-Komponente den Rotanteil verstärkt.
+
+Y: 0, Cb: 0, Cr: -1 entspricht der Farbe:
+Diese Kombination repräsentiert eine Farbe, bei der die Cr-Komponente den Grünanteil verstärkt.
+
+Y: 0.3, Cb: 0.5, Cr: -0.17 entspricht der Farbe:
+
+
+1. Suchen sie im Internet ein Bild vom Matterhorn, das eine Grösse von mind. 3000 Pixel aufweist und laden sie es auf ihren Notebook herunter. Danach bearbeiten sie es in einer Bildbearbeitungs-Software ihrer Wahl. Empfohlen wird das Online-Bildbearbeitungswerkzeug auf www.pixlr.com.
+Da das Bild eine viel zu hohe Auslösung hat, rechnen sie es herunter. Bei dieser Gelegenheit ändern sie das Bildseitenverhältnis auf 16:9. Sie werden sich für einen Bldauschschnitt entscheiden müssen. Das Bild soll schlussendlich 720 Bildzeilen ausweisen.
+Speichern sie das Bild als JPG in höchster und tiefster Qualität ab, zudem auch als PNG ohne Transparenz. Notieren sie sich die erfoderlichen Speichergrössen. Im Anschluss berechnen sie den unkomprimierten, theoretischen Speicherbedarf bei 8 Bit pro Farbkanal in MiB. Vergleichen sie die Werte und erklären sie die Unterschiede.
+
+_Meine Lösung:_
+PNG ist ein verlustfreies Format, das eine höhere Dateigröße im Vergleich zu JPG aufweisen kann, da es keine Datenkompression mit Qualitätsverlust verwendet. Die höchste Qualitätseinstellung beim Speichern als JPG führt zu einer größeren Dateigröße, da das Bild weniger komprimiert wird und somit mehr Details beibehält. Die niedrigste Qualitätseinstellung beim Speichern als JPG führt zu einer geringeren Dateigröße, da das Bild stärker komprimiert wird und somit mehr Informationen verloren gehen, was zu einer geringeren visuellen Qualität führen kann.
+
+Bei PNG-Dateien ohne Transparenz wird eine verlustfreie Kompression verwendet, die die Dateigröße reduziert, aber im Allgemeinen eine größere Dateigröße als JPG ergibt. Die Unterschiede in den Speichergrößen zwischen den verschiedenen Formaten und Qualitätsstufen zeigen die Kompromisse zwischen Dateigröße und visueller Qualität. Höhere Qualitätsstufen und verlustfreie Formate wie PNG erzeugen größere Dateien, behalten jedoch mehr Details und visuelle Qualität bei. Niedrigere Qualitätsstufen und verlustbehaftete Formate wie JPG erzeugen kleinere Dateien, weisen jedoch einen geringeren Detailgrad und eine geringere visuelle Qualität auf.
+
+2. Berechnen sie den Speicherbedarf für ein unkomprimiertes Einzelbild im HD720p50-Format bei einer True-Color-Farbauflösung. (Die Begriffe HD720p50 und TrueColor bitte googeln)
+
+
+_Meine Lösung:_
+Das HD720p50-Format bezieht sich auf eine HD-Auflösung mit einer Bildwiederholfrequenz von 50 Bildern pro Sekunde. Es hat eine Bildgröße von 1280 x 720 Pixeln (Breite x Höhe).
+
+True-Color-Farbauflösung bedeutet, dass für jeden der drei Farbkanäle (Rot, Grün, Blau) 8 Bit verwendet werden, was insgesamt 24 Bit pro Pixel ergibt.
+
+Um den Speicherbedarf für ein unkomprimiertes Einzelbild im HD720p50-Format zu berechnen, verwenden wir folgende Schritte:
+
+Multiplizieren Sie die Breite und Höhe des Bildes, um die Gesamtzahl der Pixel zu erhalten: 1280 x 720 = 921.600 Pixel.
+
+Multiplizieren Sie die Anzahl der Pixel mit 24 (8 Bit pro Farbkanal x 3 Kanäle) und teilen Sie das Ergebnis durch 8, um die Anzahl der Bytes zu erhalten: (921.600 x 24) / 8 = 2.764.800 Bytes.
+
+Um den Speicherbedarf in MiB zu berechnen, teilen Sie die Anzahl der Bytes durch 1024^2 (1024 hoch 2): 2.764.800 Bytes / 1024^2 ≈ 2,64 MiB.
+
+Daher beträgt der unkomprimierte Speicherbedarf für ein Einzelbild im HD720p50-Format mit True-Color-Farbauflösung etwa 2,64 MiB.
+
+3. Ihre Digitalkamera bietet für die Speicherung ihrer Bilder folgende Formate an: RAW, TIF, JPG. Erklären sie in ein paar kurzen Sätzen die Unterschiede und Einsatzgebiete dieser drei Formatvarianten.
+
+_Meine Lösung:_
+RAW: Das RAW-Format ist ein unkomprimiertes und verlustfreies Dateiformat, das die rohen Bilddaten direkt von der Kamera speichert. Es enthält alle Informationen, die von den Bildsensoren erfasst wurden, ohne jegliche Verarbeitung oder Kompression. RAW-Dateien bieten maximale Flexibilität bei der Bildbearbeitung, da sie es ermöglichen, Belichtung, Weißabgleich, Kontrast und andere Parameter nachträglich anzupassen. Es wird oft von professionellen Fotografen und fortgeschrittenen Nutzern bevorzugt, die eine umfassende Kontrolle über den Bearbeitungsprozess wünschen.
+
+TIF (Tagged Image File Format): TIF ist ein verlustfreies Dateiformat, das eine hohe Bildqualität beibehält. Es unterstützt verschiedene Farbmodelle und Tiefen, einschließlich 8-Bit- und 16-Bit-Pro-Channel-Farbunterstützung. TIF-Dateien werden häufig für die Archivierung und den Austausch von Bildern verwendet. Sie eignen sich gut für die professionelle Druckvorstufe, die Grafikbearbeitung und die langfristige Aufbewahrung von Bildern.
+
+JPG (Joint Photographic Experts Group): JPG ist ein komprimiertes Dateiformat, das eine effiziente Speicherung von Bildern ermöglicht. Es verwendet eine verlustbehaftete Kompression, bei der Daten entfernt werden, um die Dateigröße zu reduzieren. Dies kann zu einem Qualitätsverlust führen, insbesondere bei starken Komprimierungseinstellungen. JPG-Dateien sind platzsparend und weit verbreitet, sodass sie sich gut für den Online-Austausch von Bildern und die Anzeige auf Bildschirmen eignen. Sie eignen sich jedoch weniger für umfangreiche Bearbeitungen, da bei jeder erneuten Speicherung Kompressionsartefakte auftreten können.
+
+
+### 3.3 Reflexion 
+ Die Einführung in die Bildcodierung hat mir gezeigt, wie vielfältig und nützlich Barcodes und QR-Codes sein können. Der Unterschied zwischen Bitmap/Rastergrafik und Vektorgrafik wurde deutlich, indem ich erkannte, dass Bitmaps aus einzelnen Pixeln bestehen und für detaillierte Bilddarstellungen geeignet sind, während Vektorgrafiken auf mathematischen Formeln basieren und sich besser für skalierbare Bilder eignen. Die Unterscheidung zwischen DPI (Dots Per Inch) und PPI (Pixels Per Inch) war wichtig, um die Auflösung und Qualität von Bildern besser zu verstehen. DPI bezieht sich auf die Druckqualität, während PPI die Bildschirmauflösung beschreibt. Abschließend haben wir eine kurze Einführung in die Analog-Digital-Wandlung erhalten, die mir einen Einblick in den Prozess der Umwandlung von analogen Signalen in digitale Daten gegeben hat.
+
+### Tag 4 [6.6.2023]
+### 4.1 Theorie 
+Ein Codec steht für "Codierer/Dekodierer" und bezieht sich auf einen Algorithmus oder eine Software, die für die Kompression und Dekompression von Medieninhalten verwendet wird. Ein Codec kann verschiedene Arten von Daten komprimieren, wie Audio, Video oder Bilder. Während der Kompression werden redundante oder unwichtige Informationen entfernt, um die Dateigröße zu verringern, während bei der Dekompression die Daten wiederhergestellt werden. Bekannte Beispiele für Codecs sind H.264, MPEG-4 und AAC.
+Beispiele zu Video-Codecs:
+♦ Cinepak ♦ Sorenson ♦ Sorenson3 ♦ DV-PAL ♦ DV-NTSC ♦ MPEG-1 ♦ MPEG-2 ♦ MPEG-4 ♦ MPEG-4 Implementierungen DivX, Xvid und AVCHD ♦ H.261 ♦ H.263 ♦ H.264 ♦ H.265 ♦ Flashvideo FLV und F4V ♦ Theora ♦ RealVideo ♦ 3rd Generation Partnership Project für Smartphone 3GPP ♦ Windows Media Video wmv
+Beispiele zu Audio-Codecs:
+♦ MPEG1 Layer 2 ♦ MPEG1 Layer3 → MP3 ♦ Ogg Vorbis ♦ RealAudio ♦ Windows Media Audio wma
+
+Ein Container hingegen ist ein Dateiformat, das verschiedene Arten von Medieninhalten zusammenfasst und speichert. Ein Container kann sowohl komprimierte als auch unkomprimierte Daten enthalten und bietet zusätzliche Funktionen wie Metadaten (Informationen über das Medium) und Synchronisation von Audio und Video. Containerformate sind üblicherweise für die Wiedergabe und das Streaming von Medieninhalten auf verschiedenen Geräten geeignet. 
+Beispiele zu Audio/Video-Containers:
+Microsoft AVI → Audio-Video Interleave ♦ ADOBE Flash Video ♦ Apple Quicktime mov ♦ Blu-ray Disc ♦ DVD ♦ MPEG-2 Stream ♦ RealMedia
+
+Quelle: https://www.juergarnold.ch/videotechnik.html#mm_4_6
+
+### 4.2 Aufgaben
+Qualitätsvergleiche von Frequenzen und Auflösungen: https://www.juergarnold.ch/videotechnik.html#mm_6_3
+
+
+4. Sie möchten ihr neulich erstelltes Gameplay-Video auf Youtube veröffentlichen. Was sind die technischen Vorgaben dazu? (Format, Bildrate, Farbauflösung, Video-, Audiocodec etc.). Gibt es allenfalls rechtliche Einschränkungen?
+
+_Meine Lösung:_
+Videoformat: YouTube unterstützt verschiedene Videoformate wie MP4, MOV, AVI, WMV und mehr. Das empfohlene Format ist jedoch MP4, da es eine gute Kompatibilität und Qualität bietet.
+
+Bildrate: YouTube akzeptiert eine Vielzahl von Bildraten, darunter 24, 25, 30, 48, 50, 60, 120 und 240 Bilder pro Sekunde. Die Wahl der Bildrate hängt von Ihrem Gameplay und den Aufnahmeeinstellungen ab. Eine gängige Bildrate ist 30 FPS (Frames per Second).
+
+Auflösung: YouTube unterstützt eine breite Palette von Auflösungen. Es wird empfohlen, die höchstmögliche Auflösung zu verwenden, die für Ihr Gameplay und Ihre Aufnahmeeinstellungen geeignet ist. Gängige Auflösungen sind beispielsweise 720p (1280x720 Pixel), 1080p (1920x1080 Pixel) oder sogar 4K (3840x2160 Pixel).
+
+Video- und Audiocodec: YouTube empfiehlt die Verwendung des H.264-Videoformats für die Komprimierung von Videos. Für den Audiocodec wird AAC mit einer Bitrate von mindestens 128 kbps empfohlen.
+
+Dateigröße: YouTube hat eine Begrenzung für die Dateigröße von hochgeladenen Videos. Die maximale Dateigröße beträgt normalerweise 128 GB oder 12 Stunden, je nachdem, welcher Wert zuerst erreicht wird.
+### 4.3 Reflexion
+Die Einführung in das Thema Komprimierung hat mir einen Einblick in die verschiedenen Arten der Datenkompression gegeben. Ich lernte den Unterschied zwischen verlustloser und verlustbehafteter Komprimierung kennen und erkannte die Vor- und Nachteile jeder Methode.  Die Auseinandersetzung mit dem Huffman-Algorithmus half mir dabei, die Grundlagen der verlustlosen Datenkompression besser zu verstehen. Ich erkannte, wie der Algorithmus die Häufigkeit von Zeichen in einer Nachricht analysiert und effiziente Codewörter zuweist, um die Datenmenge zu reduzieren. Ebenfalls haben wir die erste Prüfung geschrieben im Modul. 
+
+### Tag 5 [13.06.2023]
+### 5.1 Theorie 
+RLC (Run Length Coding) bzw. RLE (Run Length Encoding) ist ein einfaches verlustloses Komprimierungsverfahren, das auf der Wiederholung von aufeinanderfolgenden Daten basiert. Es erkennt Sequenzen von gleichen Zeichen oder Symbolen und codiert sie als eine einzelne Instanz des Zeichens zusammen mit der Anzahl der Wiederholungen. Dadurch wird die Datenmenge reduziert, insbesondere bei wiederholenden Mustern.
+
+Das lexikalische Verfahren LZW (Lempel-Ziv-Welch-Algorithmus) ist ein verlustfreier Komprimierungsalgorithmus, der auf einer Wörterbuchtechnik basiert. Es erkennt und codiert wiederholende Zeichenketten oder Muster, indem es sie durch eine kürzere Codewortrepräsentation ersetzt. Das Wörterbuch wird während der Codierung dynamisch erweitert, um neue Zeichenketten zu erfassen. Dieser Algorithmus eignet sich gut für Textdaten und hat eine hohe Kompressionsrate.
+
+Der Huffman-Algorithmus ist ein verlustfreier Kompressionsalgorithmus, der auf einer statistischen Analyse der Häufigkeit von Zeichen basiert. Er ordnet häufig verwendeten Zeichen kürzere Codewörter und weniger verwendeten Zeichen längere Codewörter zu, um eine effiziente Codierung zu erreichen. Der Huffman-Algorithmus verwendet eine Baumstruktur, in der die Codewörter durch den Pfad vom Wurzelknoten zu den Blattknoten abgeleitet werden. Dieser Algorithmus wird häufig für die Komprimierung von Text-, Bild- und Tondaten verwendet.
+
+Jeder Algorithmus hat seine eigenen Stärken und Schwächen und kann je nach Art der Daten und Kompressionsanforderungen eingesetzt werden.
+### 5.2 Aufgaben
+1. Huffman-Algorithmus: (Teamarbeit). Jeder denkt für sich ein Wort mit ca. 15 Buchstaben aus und erstellt dazu die Huffman-Codetabelle und das entsprechend komprimierte Wort in HEX-Darstellung. Nun werden die Codes inklusive der Codetabelle gegenseitig ausgetauscht. Kann ihr Partner ihr gewähltes Wort richtig dekomprimieren?
+
+_Meine Lösung:_
+Buchstaben und ihre Häufigkeiten: H (1), u (1), f (2), m (2), a (1), n (1).
+
+Baum: 
+       Root
+       ├── f (2)
+       │   ├── H (1)
+       │   └── u (1)
+       └── n (2)
+           ├── m (1)
+           └── a (1)
+
+Codetabelle: 
+H: 00
+u: 01
+f: 10
+m: 110
+a: 111
+n: 111
+
+Wort: "Huffman"
+2. RLC/E-Verfahren: Sie erhalten diesen RL-Code:
+010100011110010010010010010010010010010110010110010010010010010010010010001
+Folgendes ist ihnen dazu bekannt: Es handelt sich um eine quadratische Schwarz-Weiss-Rastergrafik mit einer Kantenlänge von 8 Pixel. Es wird links oben mit der Farbe Weiss begonnen. Eine Farbe kann sich nicht mehr als siebenmal wiederholen. Zeichnen sie die Grafik auf. Was stellt sie dar?
+
+_Meine Lösung:_
+Es sollte einen Quadrat darstellen. 
+
+3. LZW-Verfahren: Erstellen sie die LZW-Codierung für das Wort «ANANAS» und überprüfen sie mit der Dekodierung ihr Resultat. Danach versuchen sie den erhaltenen LZW-Code «ERDBE<256>KL<260>» zu dekomprimieren.  
+
+_Meine Lösung:_
+1. "A" zur aktuellen Sequenz hinzufügen.
+2. Überprüfen, ob die Sequenz bereits im Wörterbuch vorhanden ist.
+3. "N" zur aktuellen Sequenz hinzufügen und "AN" erhalten.
+4. Überprüfen, ob die Sequenz "AN" bereits im Wörterbuch vorhanden ist.
+5. Die Schritte 5-7 für die restlichen Zeichen "A", "N", "A" und "S" wiederholen.
+Die LZW-Codierung für das Wort "ANANAS" lautet: 0 1 2 4 3.
+
+### 5.3 Reflexion 
+Zu Begin haben wir eine Prüfungsbesprechung gemacht zu der Prüfung, die wir ansolviert haben letzte Woche. Danach haben wir eine kurze Einführung in die Themen RLC,RLE und Verlustbehaftete Komprimierung bekommen. Die Einführung in die verlustbehaftete Komprimierung von Bild- und Tondaten eröffnete mir die Welt der Techniken, die bei der Reduzierung der Datenmenge unter Berücksichtigung der Wahrnehmung des menschlichen Sinnes angewendet werden. Es wurde deutlich, dass bei der verlustbehafteten Komprimierung eine Abwägung zwischen Qualität und Dateigröße erfolgen muss. Wir haben auch Zeit bekommen uns selbstständig in den verschiede Themenbereiche zu vertiefen. 
+
+### Tag 6 [20.6.2023]
+### 6.1 Theorie 
+Klassische symmetrische Verfahren wie ROT, Vigenere und XOR sind Verschlüsselungsverfahren, die in der Kryptographie eingesetzt werden. ROT (Rotation) ist eine einfache Verschlüsselungsmethode, bei der jeder Buchstabe im Klartext um einen festgelegten Wert verschoben wird. Zum Beispiel wird bei ROT-13 jeder Buchstabe um 13 Positionen im Alphabet verschoben. ROT-Verschlüsselung ist ein symmetrisches Verfahren, da derselbe Schlüssel zum Verschlüsseln und Entschlüsseln verwendet wird. Es handelt sich jedoch um eine sehr schwache Verschlüsselungsmethode, da es nur 25 mögliche Verschiebewerte gibt.
+
+Vigenere ist eine polyalphabetische Verschlüsselungsmethode, bei der eine Schlüsselwortphrase verwendet wird, um den Klartext zu verschlüsseln. Jeder Buchstabe des Schlüsselworts bestimmt die Verschiebung, die auf den entsprechenden Buchstaben im Klartext angewendet wird. Dies ermöglicht eine stärkere Verschlüsselung als ROT, da die Verschiebung für jeden Buchstaben im Klartext unterschiedlich sein kann.
+
+XOR (Exklusives Oder) ist ein bitweises Verknüpfungsverfahren, das häufig in der symmetrischen Verschlüsselung verwendet wird. Beim XOR-Verschlüsseln werden die Bits des Klartexts mit den entsprechenden Bits eines Schlüssels kombiniert, um den Geheimtext zu erzeugen. Die Entschlüsselung erfolgt durch erneutes Anwenden des XOR-Verfahrens mit demselben Schlüssel. 
+
+
+### 6.2 Aufgaben
+1. Die Rotationschiffre:
+Schon der römische Feldherr und spätere Kaiser Julius Cäsar kannte den folgenden Verschlüsselungstrick und nutzte ihn bei seinen geheimen Botschaften: Ersetze jeden Buchstaben durch den, der eine bestimmte Anzahl Stellen später im Alphabet folgt! Somit konnte Cäsar effektiv geheime Botschaften übermitteln, wie z.B. diese Zitate:
+GHU DQJULII HUIROJW CXU WHHCHLW GLH ZXHUIHO VLQG JHIDOOHQ LFK NDP VDK XQG VLHJWH WHLOH XQG KHUUVFKH
+Benutzen Sie nun Ihr CrypTool1 und finden Sie heraus, um welche Zitate es sich handelt! Die Rotationschiffre ist übrigens ein klassisches, symmetrisches Verfahren. Nun aber nicht einfach drauflos probieren. Machen Sie etwas Kryptoanalyse mit einem ASCII-Histogramm. (Tipp: Häufigkeitsanalyse der vorkommenden Buchstaben)
+
+_Meine Lösung:_
+DER ANGRIFF ERFOLGT ZUR TEEZEIT DIE WUERFEL SIND GEFALLEN ICH KAM SAH UND SIEGTE TEILE UND HERRSCHE
+
+2. Vigenèreverschlüsselung: 
+Um etwas warm zu laufen, verschlüsseln wird ohne Cryptool (!) das Wort BEEF mit dem Schlüsselwort AFFE.
+Danach, wiederum ohne Cryptool, entschlüsseln wir den Geheimtext WRKXQT mit dem Schlüsselwort SECRET.
+Nun wirds wirklich spannend: Wir versuchen den Vigenère-Code zu knacken und bedienen uns einem Analysewerkzeug im Cryptool1. Heimlich abgehört haben wir die folgende Vigenère-Chiffre:
+USP JHYRH ZZB GTV CJ WQK OCLGQVFQK GAYKGVFGX NS ISBVB MYBC MWCC NS JOEVB GTV KRQFV AGK XCUSP VFLVBLLBE ESSEILUBCLBXZU SENSWFGVRCES SER CZBCE ILUOLBPYISL CCSZG VZJ
+Neugierig wie wir sind, möchten wir gerne wissen, welcher Text hinter dieser Chiffre steckt. Da uns aber das Schlüsselwort fehlt, müssen wir tief in unsere Trickkiste greifen. (Tipp: Im CrypTool1/Hilfe/Index/Vigenère-Verschlüsselungsverfahren findet man weitere Informationen zum Vigenère-Analyseverfahren.)
+
+_Meine Lösung:_
+Key = ROY
+DER STAAT BIN ICH ES IST AEUSSERST SCHWIERIG ZU REDEN OHNE VIEL ZU SAGEN ICH MACHE MIT JEDER ERNENNUNG NEUNUNDNEUNZIG UNZUFRIEDENE UND EINEN UNDANKBAREN LOUIS XIV
+### 6.3 Reflexion 
+Das Kahoot Spiel hat geholfen das gerlernte nochmals zu repetieren. Im Anschluss daran haben wir uns mit der Intraframe-Komprimierung beschäftigt. Dabei ging es um verschiedene Techniken wie die Reduzierung der Auflösung, die diskrete Kosinustransformation (DCT) und Subsampling, die innerhalb eines Bildes angewendet werden. Nachdem wir alle Aufgaben zu Kompression und Multimedia abgeschlossen hatten, haben wir uns einem neuen Thema zugewandt: Kryptologie, Kryptografie und Kryptoanalyse. Wir begannen mit dem Einsatz des Tools "Crypttool1", einem Labor für Kryptografie und Analyse. Dies ermöglichte uns, uns mit klassischen symmetrischen Verfahren wie ROT, Vigenere und XOR zu beschäftigen. Wir lernten verschiedene Verschlüsselungsmethoden kennen und wie sie angewendet werden.
