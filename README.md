@@ -400,3 +400,90 @@ Key = ROY
 DER STAAT BIN ICH ES IST AEUSSERST SCHWIERIG ZU REDEN OHNE VIEL ZU SAGEN ICH MACHE MIT JEDER ERNENNUNG NEUNUNDNEUNZIG UNZUFRIEDENE UND EINEN UNDANKBAREN LOUIS XIV
 ### 6.3 Reflexion 
 Das Kahoot Spiel hat geholfen das gerlernte nochmals zu repetieren. Im Anschluss daran haben wir uns mit der Intraframe-Komprimierung beschäftigt. Dabei ging es um verschiedene Techniken wie die Reduzierung der Auflösung, die diskrete Kosinustransformation (DCT) und Subsampling, die innerhalb eines Bildes angewendet werden. Nachdem wir alle Aufgaben zu Kompression und Multimedia abgeschlossen hatten, haben wir uns einem neuen Thema zugewandt: Kryptologie, Kryptografie und Kryptoanalyse. Wir begannen mit dem Einsatz des Tools "Crypttool1", einem Labor für Kryptografie und Analyse. Dies ermöglichte uns, uns mit klassischen symmetrischen Verfahren wie ROT, Vigenere und XOR zu beschäftigen. Wir lernten verschiedene Verschlüsselungsmethoden kennen und wie sie angewendet werden.
+### Tag 7 [27.06.2023]
+### 7.1 Theorie
+Hybride Verschlüsselungsverfahren kombinieren die Vorteile von asymmetrischen (öffentlichen) und symmetrischen (geheimen) Verschlüsselungsverfahren, um eine effiziente und sichere Kommunikation zu ermöglichen.
+
+Der Ablauf eines hybriden Verschlüsselungsverfahrens sieht wie folgt aus:
+
+1. Der Sender generiert zunächst einen zufälligen symmetrischen Sitzungsschlüssel, der für die Verschlüsselung der eigentlichen Daten verwendet wird. Dieser Sitzungsschlüssel ist geheim und wird nicht über das Netzwerk übertragen.
+
+2. Der öffentliche Schlüssel des Empfängers wird verwendet, um den Sitzungsschlüssel asymmetrisch zu verschlüsseln. Nur der Empfänger kann den Sitzungsschlüssel mit seinem privaten Schlüssel entschlüsseln.
+
+3. Der verschlüsselte Sitzungsschlüssel wird zusammen mit den verschlüsselten Daten an den Empfänger gesendet.
+
+4. Der Empfänger verwendet seinen privaten Schlüssel, um den verschlüsselten Sitzungsschlüssel zu entschlüsseln und den symmetrischen Sitzungsschlüssel zu erhalten.
+
+5. Der symmetrische Sitzungsschlüssel wird verwendet, um die eigentlichen Daten symmetrisch zu verschlüsseln. Dieser Vorgang ist effizienter als die asymmetrische Verschlüsselung.
+
+6. Die verschlüsselten Daten werden an den Empfänger übertragen.
+
+7. Der Empfänger verwendet den symmetrischen Sitzungsschlüssel, um die verschlüsselten Daten zu entschlüsseln und den Klartext zu erhalten.
+
+Durch die Kombination von asymmetrischer und symmetrischer Verschlüsselung profitiert das hybride Verfahren von der hohen Sicherheit der asymmetrischen Verschlüsselung für den sicheren Austausch des symmetrischen Sitzungsschlüssels, während die effiziente symmetrische Verschlüsselung für die eigentliche Datenübertragung verwendet wird. Auf diese Weise werden die Vorteile beider Verfahren genutzt, um eine sichere und effiziente Kommunikation zu gewährleisten.
+
+
+### 7.2 Aufgaben
+1. Spielen sie in Cryptool1 einen Schlüsseltausch gemäss Diffie-Hellman durch. Experimentieren sie mit verschiedenen, auch eigenen Parametern. (Sie finden das Tool unter Einzelverfahren→Protokolle→Diffie-Hellman-Demo...)
+
+_Meine Lösung:_
+![alice](/aliceBob.png) 
+2. RSA-Verschlüsselung:
+Erzeugen sie zwei asymmetrische Schlüsselpaare: Eines für «Muster Felix» und eines für «Hasler Harry» (Sie finden das Tool unter Digitale Signaturen/PKI→PKI→Schlüssel erzeugen/importieren...)
+Verschlüsseln Sie nun eine Nachricht für Muster Felix und versuchen sie danach, den Text als Hasler Harry, danach als Muster Felix zu entschlüsseln. Was stellen sie fest? (Sie finden die Tools unter Ver-/Entschlüsseln→Asymmetrisch→RSA-Ver/Entschlüsselung...)
+
+_Meine Lösung:_
++ Decrypt: 
+![decyrptMessage](/decryptMessage.png) 
+
++ Encrypt: 
+![encrypt](/encrypt.png)
+
+Digital Signieren
+1. Führen Sie nun im Cryptool die Hash-Demo aus. Sie finden diese unter Einzelverfahren → Hashverfahren → Hash-Demo...
+
+_Meine Lösung:_
+
+![hashdemo](/hashdemo.png)
+2. Erstellen sie ein kurzes Dokument und signieren sie dieses.
+Siehe Digitale Signaturen/PKI → Dokument signieren nzw. Dokument überprüfen.
+Nehmen sie am signierten Dokument eine kleine Änderung vor und überprüfen sie die Signatur erneut. Was stellen sie fest?
+
+_Meine Lösung:_
+![signieren](/signieren.png)
+
+Nach Änderung der Nachricht: 
+![signieren](/changemessage.png)
+
+
+
+### 7.3 Reflexion
+Die Tätigkeiten haben mir einen Einblick in verschiedene Verschlüsselungsverfahren gegeben. Symmetrische Verschlüsselung hat den Nachteil, dass die Anzahl der Schlüssel quadratisch mit der Anzahl der Kommunikationspartner wächst und der Schlüsseltausch eine Herausforderung darstellt. Asymmetrische Verschlüsselung löst dieses Problem durch den Einsatz eines Schlüsselpaars und ermöglicht einen sicheren Schlüsseltausch. Hybride Verfahren kombinieren die Vorteile beider Ansätze. Hash-Wertbildung und digitale Signatur dienen der Datenintegrität und Authentizität. Insgesamt haben die Tätigkeiten mein Verständnis für Verschlüsselungsverfahren vertieft.
+
+### Tag 8 [04.07.2023]
+### 8.1 Theorie
+PKI (Public Key Infrastructure) ist eine Infrastruktur, die die Verwaltung und den Einsatz von asymmetrischen Verschlüsselungsverfahren erleichtert. Sie basiert auf der Verwendung von Zertifikaten, die digitale Identitäten und öffentliche Schlüssel einer Person oder einer Organisation authentifizieren.
+
+Zertifikate werden verwendet, um die Echtheit von öffentlichen Schlüsseln zu überprüfen und die Vertrauenswürdigkeit von Kommunikationspartnern zu gewährleisten. Für E-Mail-Verschlüsselung wird das OpenPGP-Protokoll verwendet, das auf dem PGP (Pretty Good Privacy) basiert. OpenPGP ermöglicht die Verschlüsselung, Signierung und Verifizierung von E-Mails durch den Einsatz von asymmetrischer Verschlüsselung.
+
+Für die sichere Übertragung von Daten über das Internet, insbesondere bei HTTPS-Verbindungen, werden ebenfalls Zertifikate verwendet. Hier kommt das X.509-Standardformat zum Einsatz. Dabei wird ein Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle (Certificate Authority) ausgestellt, die die Identität des Inhabers überprüft. Das Zertifikat enthält den öffentlichen Schlüssel des Servers und wird verwendet, um die sichere Kommunikation zwischen dem Client und dem Server mittels asymmetrischer Verschlüsselung und dem TLS (Transport Layer Security)-Protokoll zu ermöglichen.
+
+Insgesamt bieten PKI und Zertifikate eine grundlegende Infrastruktur für die sichere Kommunikation über E-Mails und das Internet. Sie gewährleisten die Vertraulichkeit, Integrität und Authentizität der übertragenen Daten.
+
+### 8.2 Aufgaben
+Lehrerdemo
+
+### 8.3 Reflexion
+Es wurde erläutert, wie Zertifikate zur Authentifizierung von Kommunikationspartnern verwendet werden und wie die Verschlüsselung und Signierung von E-Mails mit PGP und OpenPGP funktioniert.
+
+Ein weiterer Teil der Prüfungsbesprechung befasste sich mit der sicheren Datenübertragung über HTTPS und dem TLS-Protokoll. Es wurde eine Lehrerdemo durchgeführt, bei der eine Anfrage an einen HTTPS-Webserver mit Wireshark analysiert wurde. Dadurch konnte ich einen Einblick in den Ablauf der sicheren Datenübertragung gewinnen und die Bedeutung von TLS-Zertifikaten besser verstehen.
+
+Eine weitere Lehrerdemo konzentrierte sich auf die Verwendung von pgp4win und Kleopatra. Dabei wurde gezeigt, wie man Schlüssel importiert und verschiedene Kombinationen von Verschlüsselung, Entschlüsselung und Signierung von Nachrichten durchführt. Diese praktischen Übungen haben mir geholfen, das Konzept der asymmetrischen Verschlüsselung besser zu verstehen und die Anwendung von PGP in der Praxis zu erlernen.
+
+
+
+
+
+
+
+
